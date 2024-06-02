@@ -7,7 +7,13 @@ const appointmenrRoutes=require('./routes/appointments')
 
 const app=express();
 //cors setup
-app.use(cors());
+app.use(cors(
+    {
+  origin: ["https://inaaratest.in"], // Replace with your frontend's URL
+  methods: ['GET', 'POST'], // Allowed methods
+  credentials: true // Allow cookies and other credentials to be sent
+}
+));
 
 //url encoded for mongo db setup
 app.use(express.urlencoded({extended:true}));
