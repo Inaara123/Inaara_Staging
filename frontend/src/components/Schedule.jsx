@@ -15,7 +15,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/appointments', {
+      await axios.post('https://inaara-staging.onrender.com/appointments', {
         fullName,
         contact,
         date: date.toISOString(), // Convert date to ISO string

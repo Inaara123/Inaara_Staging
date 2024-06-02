@@ -33,7 +33,7 @@ const Form = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:5000/users', formData);
+      const response = await axios.post('https://inaara-staging.onrender.com/users', formData);
       console.log(response.data);
       toast.success('Form submitted successfully!');
       // Clear form
